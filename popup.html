@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      input {
+        appearance: none;
+        background-color: #fff;
+        border-color: #6b7280;
+        border-width: 1px;
+        border-radius: 0;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      body > :not([hidden])~:not([hidden]) {
+        margin-top: 24px;
+      }
+
+      body div > :not([hidden])~:not([hidden]) {
+        margin-top: 8px;
+      }
+
+      label, small {
+        display: block;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <input type="text" id="text" placeholder="Enter username">
+      <button id="search"> Search </button>
+    </div>
+
+    <div>
+      <label for="page"> What Page? </label>
+      <input type="number" id="page" value="1" step="1">
+      <small>
+        GitHub API can only show 100 repos at a time. 
+        You can get more by changing this value and clicking "Create Bookmarks"
+      </small>
+    </div>
+
+    <div>
+      <input type="text" id="key" placeholder="Enter access token">
+      <button id="add"> Add Token </button>
+    </div>
+
+    <div>
+      <button id="button"> Create Bookmarks </button>
+    </div>
+
+    <div>
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40" height="40" id="image">
+      <div id="name">Octocat</div>
+    </div>
+  </body>
+</html>
